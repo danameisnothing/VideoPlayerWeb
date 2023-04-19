@@ -1,0 +1,45 @@
+select {
+    font-family: 'Poppins', sans-serif;
+    padding: 7px;
+}
+
+input, p, span, input {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    height: 40px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.175s;
+}
+
+button:hover {
+    background-color: #7c7b7b;
+}
+
+#container {
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+#container:hover {
+    background-color: #7c7b7b;
+}
+
+/* TODO: fix aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+video {
+    max-width: 100vw;
+    max-height: 80vh;
+}
+
+/* for 16:9 video thumbnail */
+#thumbnail {
+    width: 150px;
+    height: 84.375px;
+}
+
+#title {
+    margin-bottom: auto;
+    margin-top: auto;
+}
