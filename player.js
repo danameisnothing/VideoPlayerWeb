@@ -208,8 +208,6 @@ function processVideoQueue(e) {
     const files = e.target.files;
     let badfiles = ""; // Files that have an invalid type or are already in the queue
     for (let i = 0; i < files.length; i++) {
-        // TODO: remove
-        console.log(files[i].type);
         if (confirmValidType(files[i].type)) {
             if (isVideoInQueue(files[i])) {
                 badfiles += files[i].name + ", ";
