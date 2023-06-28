@@ -10,14 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./player.js" defer></script>
+    <!--<script src="./events.js" defer></script>-->
 </head>
 <body>
+    <noscript><p id="nojs-notif">JavaScript is required to use this site. Please enable JavaScript or use a browser that supports JavaScript</p></noscript>
     <div id="controls">
         <button id="opfile">Open video / audio</button>
         <button id="opfolder">Open folder (add to play queue)</button>
         <button id="clrlist">Clear playlist (except the current video)</button>
         <button id="piptoggle">Toggle PiP video</button>
-        <select id="speedPreset">
+        <select id="speedPreset" autocomplete="off">
             <option value="0.125">0.125x</option>
             <option value="0.25">0.25x</option>
             <option value="0.5">0.5x</option>
@@ -44,16 +46,26 @@
             <option value="7.5">7.5x</option>
             <option value="8">8x</option>
         </select>
-        <select id="modePreset">
+        <select id="modePreset" autocomplete="off">
             <!-- the spaghetti adventure begins -->
-            <option value="0" selected>Off</option>
-            <option value="1">Autoplay</option>
-            <option value="2">Shuffle</option>
-            <option value="3">Loop forever</option>
+            <option value="" selected>Off</option>
+            <option value="autoPlay">Autoplay</option>
+            <option value="shuffle">Shuffle</option>
+            <option value="repeat">Loop forever</option>
         </select>
     </div>
     <br>
+    <input id="noiseLimiterToggle" type="checkbox" autocomplete="off">
+    <label for="noiseLimiterToggle">Enable Noise Limiter (Only on channel 0 only!)</label>
+    <br>
+    <br>
+    <button id="forwardFrame">Fast forward 1 frame</button>
+    <button id="rewindFrame">Rewind 1 frame</button>
+    <br>
+    <br>
     <button id="clrNotif">Clear notification text</button>
+    <br>
+    <canvas id="waveformDebug" width="1024px" height="256px"></canvas>
     <br>
     <p id="notice">N/A</p>
     <p id="titleVid">N/A</p>
